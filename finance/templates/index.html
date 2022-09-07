@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <!--test paragraph-->
+    <!-- get the layout from birthdays-->
+     <table class="table table-striped">
+      <thead>
+        <tr>
+         <th>stock_name</th>
+         <th>shares</th>
+         <th>current_price</th>
+         <th>total</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for i in range(name | length)%}
+            <tr>
+              <td>{{name[i]}}</td>
+              <td>{{share[i]}}</td>
+              <td>{{price[i]}}</td>
+              <td>{{total[i]}}</td>
+            </tr>
+            {%endfor%}
+            <tr>
+              <td></td>
+              <td></td>
+              <td><b>Cash</b></td>
+              <td><b>Grand_total</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>{{cash}}</td>
+              <td>{{grand_total}}</td>
+            </tr>
+      </tbody>
+     </table>
+
+{% endblock %}

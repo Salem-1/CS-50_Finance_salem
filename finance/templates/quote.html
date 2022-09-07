@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+            <p>{{message}}</p>
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Stock sympol" type="text">
+        </div>
+
+        </div>
+        <button class="btn btn-primary" type="submit">Get quote</button>
+
+    </form>
+{% endblock %}

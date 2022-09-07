@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <!--test paragraph-->
+    <!-- get the layout from birthdays-->
+     <table class="table table-striped">
+      <thead>
+        <tr>
+         <th>Symbol</th>
+         <th>Shares</th>
+         <th>Trans</th>
+         <th>Price</th>
+         <th>Transacted</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for i in range(tall)%}
+            <tr>
+                <td>{{symbol[i]}}</td>
+                <td>{{shares[i]}}</td>
+                <td>{{trans[i]}}</td>
+                <td>{{price[i]}}</td>
+                <td>{{dtime[i]}}</td>
+            </tr>
+            {%endfor%}
+      </tbody>
+
+{% endblock %}
